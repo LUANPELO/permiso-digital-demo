@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permiso Digital — Permisos de viaje para menores</title>
+  <meta name="description" content="Plataforma para emitir permisos de viaje de menores de edad 100% digitales, con el formato oficial de cada empresa de transporte, firma y validación en terminal." />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="vendor/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="accent-bar"><span></span><span></span><span></span></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Permiso Digital, inicio">
+        <img class="brand-logo" src="assets/logo-permiso-digital.png" alt="Permiso Digital — Niños, Niñas y Adolescentes" />
+      </a>
+      <nav class="site-nav" id="siteNav">
+        <a href="#permisos">Permisos</a>
+        <a href="#tutorial">Tutorial</a>
+        <a href="#caracteristicas">Características</a>
+        <a class="btn-ghost" href="#permisos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/></svg>
+          Ver permisos
+        </a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <span class="hero-badge"><span class="dot"></span> Demostración interactiva</span>
+      <h1>Permisos de viaje para menores, <span class="hl">100&nbsp;% digitales</span>.</h1>
+      <p class="lead">
+        Emite el permiso de viaje de un menor en minutos, con el <strong>formato oficial de cada
+        empresa de transporte</strong>, firma del autorizante y un código de barras que el agente
+        valida en la terminal. Adiós al papel.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#permisos">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Explorar los 5 permisos
+        </a>
+        <a class="btn btn-outline" href="#tutorial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+          Ver el tutorial
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat"><b>5</b><span>Empresas de transporte</span></div>
+        <div class="stat"><b>Oficial</b><span>Formato por empresa</span></div>
+        <div class="stat"><b>Firma</b><span>+ código de barras</span></div>
+        <div class="stat"><b>Terminal</b><span>Validación del agente</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPANY STRIP ================= -->
+  <div class="companies-strip">
+    <div class="wrap">
+      <span class="label">Formatos incluidos:</span>
+      <span class="name"><span class="swatch" style="background:#1c4a8a"></span> Copetran</span>
+      <span class="name"><span class="swatch" style="background:#e2001a"></span> Expreso Brasilia</span>
+      <span class="name"><span class="swatch" style="background:#c8102e"></span> Rápido Ochoa</span>
+      <span class="name"><span class="swatch" style="background:#003a70"></span> Berlinas del Fonce</span>
+      <span class="name"><span class="swatch" style="background:#0a6b3b"></span> Expreso Bolivariano</span>
+    </div>
+  </div>
+
+  <!-- ================= SHOWCASE: CARRUSEL + TUTORIAL ================= -->
+  <section class="section showcase" id="permisos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Formatos oficiales</div>
+        <h2>Un permiso, el formato exacto de cada empresa</h2>
+        <p>Desliza el carrusel para ver los cinco formatos y haz clic en cualquiera para abrir el
+           <strong>PDF real</strong> con todos sus datos, tal como lo recibe el pasajero.</p>
+      </div>
+
+      <div class="showcase-grid">
+
+        <!-- LEFT: Carrusel de permisos -->
+        <div class="carousel-col">
+          <div class="panel-title">
+            <h3>Galería de permisos</h3>
+            <span class="tag">PDF real · clic para abrir</span>
+          </div>
+
+          <div class="swiper permit-swiper" id="permitSwiper">
+            <div class="swiper-wrapper" id="permitWrapper"><!-- slides inyectados por JS --></div>
+          </div>
+
+          <div class="carousel-controls">
+            <button id="prevBtn" aria-label="Anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="active-name" id="activeName">Copetran<small>Toca para abrir el PDF</small></div>
+            <button id="nextBtn" aria-label="Siguiente">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+          <p class="carousel-help">Arrastra con el mouse o el dedo para navegar entre las empresas.</p>
+        </div>
+
+        <!-- RIGHT: Tutorial Tango -->
+        <div class="tutorial-col" id="tutorial">
+          <div class="panel-title">
+            <h3>Cómo se genera un permiso</h3>
+            <span class="tag">Tutorial interactivo</span>
+          </div>
+          <div class="tutorial-frame">
+            <iframe
+              src="https://app.tango.us/app/embed/ef3775f3-4978-49d2-9e23-58a01130b8d9?defaultListView=false&hideAuthorAndDetails=false&makeViewOnly=true&skipBranding=false&skipCover=false"
+              sandbox="allow-scripts allow-top-navigation-by-user-activation allow-popups allow-same-origin"
+              title="Generar permiso de viaje digital"
+              referrerpolicy="strict-origin-when-cross-origin"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+          <p class="tutorial-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:0 0 16px;margin-top:1px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            Guía paso a paso del flujo completo: datos del menor, autorizante, empresa y descarga del PDF.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section" id="caracteristicas">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Por qué es diferente</div>
+        <h2>Pensado para el mundo real del transporte</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h4>Formato oficial</h4>
+          <p>Cada empresa conserva su propio formato de permiso, replicado tal cual el original.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/><path d="M7 11h.01M11 11h6M7 15h.01M11 15h6"/></svg></div>
+          <h4>Firma + código de barras</h4>
+          <p>El autorizante firma en pantalla y el permiso lleva un código de barras verificable.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h4>Validación en terminal</h4>
+          <p>El agente de la empresa consulta y aprueba el permiso desde su propio panel.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+          <h4>Protección de datos</h4>
+          <p>Manejo de datos de menores conforme a la Ley 1581 (Habeas Data) de Colombia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="brand">
+        <img class="brand-logo" src="assets/logo-permiso-digital.png" alt="Permiso Digital — Niños, Niñas y Adolescentes" />
+      </div>
+      <div class="footer-note">
+        Demostración con datos de ejemplo (nombres y documentos ficticios). No corresponde a personas reales.
+      </div>
+      <small>© 2026 Permiso Digital<br/>Permisos de viaje para menores de edad</small>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL: PDF VIEWER ================= -->
+  <div class="modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="co-badge" id="modalBadge">CO</div>
+        <div class="co-info">
+          <strong id="modalTitle">Empresa</strong>
+          <span id="modalSub">Permiso de viaje</span>
+        </div>
+        <div class="head-actions">
+          <span class="badge-estado" id="modalEstado">—</span>
+          <a class="icon-btn" id="modalDownload" title="Descargar PDF" download>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          </a>
+          <button class="icon-btn" data-close title="Cerrar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <div class="modal-loading"><div class="spinner"></div>Cargando PDF…</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/swiper-bundle.min.js"></script>
+  <script src="vendor/pdf.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
