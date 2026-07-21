@@ -11,12 +11,13 @@
 
   // ── Datos de cada empresa (los PDF viven en pdfs/<key>.pdf) ─────────────
   const EMPRESAS = [
-    { key: 'copetran',    nombre: 'Copetran',            color: '#1c4a8a', iniciales: 'CO', menor: 'Samuel David',   codigo: 'PAA-28062026-45454', estado: 'vencido' },
-    { key: 'brasilia',    nombre: 'Expreso Brasilia',    color: '#e2001a', iniciales: 'EB', menor: 'Javier Sosa',    codigo: 'PAA-04072026-64913', estado: 'vencido' },
-    { key: 'ochoa',       nombre: 'Rápido Ochoa',        color: '#c8102e', iniciales: 'RO', menor: 'Juan C. Pérez',  codigo: 'PAA-11072026-79846', estado: 'activo'  },
-    { key: 'berlinas',    nombre: 'Berlinas del Fonce',  color: '#003a70', iniciales: 'BF', menor: 'Gaus Junior',    codigo: 'PAA-29062026-25425', estado: 'vencido' },
-    { key: 'bolivariano', nombre: 'Expreso Bolivariano', color: '#0a6b3b', iniciales: 'XB', menor: 'Eduard N.',      codigo: 'PNN-2026-78753',     estado: 'activo'  },
+    { key: 'copetran',    nombre: 'Copetran',            color: '#1c4a8a', logo: 'copetran.svg',    codigo: 'PAA-28062026-45454' },
+    { key: 'brasilia',    nombre: 'Expreso Brasilia',    color: '#e2001a', logo: 'brasilia.png',    codigo: 'PAA-04072026-64913' },
+    { key: 'ochoa',       nombre: 'Rápido Ochoa',        color: '#c8102e', logo: 'ochoa.png',       codigo: 'PAA-11072026-79846' },
+    { key: 'berlinas',    nombre: 'Berlinas del Fonce',  color: '#003a70', logo: 'berlinas.png',    codigo: 'PAA-29062026-25425' },
+    { key: 'bolivariano', nombre: 'Expreso Bolivariano', color: '#0a6b3b', logo: 'bolivariano.jpg', codigo: 'PNN-2026-78753'     },
   ];
+  const logoPath = (e) => 'assets/logos/' + e.logo;
   const pdfPath = (key) => 'pdfs/' + key + '.pdf';
 
   // ── Caché de documentos PDF cargados (para no recargarlos dos veces) ────
@@ -127,7 +128,7 @@
   const modalBody = document.getElementById('modalBody');
   const modalTitle = document.getElementById('modalTitle');
   const modalSub = document.getElementById('modalSub');
-  const modalBadge = document.getElementById('modalBadge');
+  const modalLogo = document.getElementById('modalLogo');
   const modalEstado = document.getElementById('modalEstado');
   const modalDownload = document.getElementById('modalDownload');
   let modalToken = 0;
@@ -139,8 +140,8 @@
 
     modalTitle.textContent = e.nombre;
     modalSub.textContent = 'Permiso de viaje · ' + e.codigo;
-    modalBadge.textContent = e.iniciales;
-    modalBadge.style.background = e.color;
+    modalLogo.src = logoPath(e);
+    modalLogo.alt = e.nombre;
     modalEstado.textContent = 'Formato oficial';
     modalEstado.className = 'badge-estado activo';
     modalDownload.href = pdfPath(key);

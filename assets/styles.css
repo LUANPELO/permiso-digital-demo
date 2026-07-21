@@ -154,11 +154,11 @@ img { max-width: 100%; display: block; }
 }
 .marquee-track {
   display: inline-flex; align-items: center; gap: 60px; width: max-content;
-  animation: marquee 32s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-track img {
-  height: 38px; width: auto; max-width: 170px; object-fit: contain;
+  height: 38px; width: auto; max-width: 195px; object-fit: contain;
   opacity: .9; flex: 0 0 auto;
 }
 @keyframes marquee {
@@ -308,10 +308,11 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; gap: 14px; padding: 16px 20px;
   background: #fff; border-bottom: 1px solid var(--border);
 }
-.modal-head .co-badge {
-  width: 42px; height: 42px; border-radius: 11px; flex: 0 0 42px;
-  display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 15px;
+.modal-head .co-logo-box {
+  flex: 0 0 auto; height: 46px; display: grid; place-items: center;
+  padding: 5px 10px; background: #fff; border: 1px solid var(--border); border-radius: 10px;
 }
+.modal-head .co-logo { height: 34px; width: auto; max-width: 130px; object-fit: contain; display: block; }
 .modal-head .co-info { min-width: 0; }
 .modal-head .co-info strong { display: block; color: var(--ink); font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .modal-head .co-info span { display: block; color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -362,7 +363,8 @@ img { max-width: 100%; display: block; }
   .modal { padding: 8px; }
   .modal-card { width: 100%; max-height: 94vh; border-radius: 14px; }
   .modal-head { padding: 12px 14px; gap: 10px; }
-  .modal-head .co-badge { width: 36px; height: 36px; flex-basis: 36px; font-size: 13px; border-radius: 9px; }
+  .modal-head .co-logo-box { height: 38px; padding: 3px 7px; }
+  .modal-head .co-logo { height: 28px; max-width: 92px; }
   .modal-head .co-info strong { font-size: 14.5px; }
   .modal-head .co-info span { font-size: 12px; }
   .modal-head .head-actions { gap: 6px; }
