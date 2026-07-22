@@ -27,6 +27,7 @@
       <nav class="site-nav" id="siteNav">
         <a href="#permisos">Permisos</a>
         <a href="#tutorial">Tutorial</a>
+        <a href="#agente">Agente</a>
         <a href="#caracteristicas">Características</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
@@ -150,6 +151,53 @@
           </p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AGENTE (simulación interactiva) ================= -->
+  <section class="section agent-demo" id="agente">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Validación en la terminal</div>
+        <h2>La interfaz del agente, en vivo</h2>
+        <p>Así valida el agente de la empresa antes de que el menor aborde: busca el permiso,
+           confirma que es <strong>auténtico y está vigente</strong> y aprueba o rechaza.
+           Pruébalo tú mismo con los permisos de demostración.</p>
+      </div>
+
+      <div class="agent-stage">
+        <!-- Ventana del navegador en el PC de la empresa -->
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="bdot r"></span><span class="bdot y"></span><span class="bdot g"></span>
+            <div class="browser-url">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              app.permisodigital.co/validar
+            </div>
+          </div>
+          <div class="browser-screen" id="agentScreen"><!-- inyectado por JS --></div>
+        </div>
+
+        <!-- Explicación paso a paso -->
+        <ol class="agent-steps">
+          <li>
+            <span class="step-num">1</span>
+            <div><strong>Escanea o busca el permiso</strong><p>Por código de barras o escribiendo el código impreso.</p></div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div><strong>Verifica el estado</strong><p>El sistema confirma que el permiso es auténtico y sigue vigente para esa ruta y fecha.</p></div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div><strong>Aprueba o rechaza</strong><p>La decisión queda registrada con fecha, hora y el agente responsable.</p></div>
+          </li>
+        </ol>
+        <div class="agent-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:0 0 16px;margin-top:1px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Demostración con datos de ejemplo. En la app real, el agente inicia sesión con su empresa y las decisiones se guardan en el sistema.
+        </div>
       </div>
     </div>
   </section>
