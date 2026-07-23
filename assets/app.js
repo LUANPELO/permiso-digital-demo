@@ -197,27 +197,27 @@
   if (!screen) return;
 
   const PERMISOS = [
-    { key: 'ochoa', empresa: 'Rápido Ochoa', color: '#c8102e', iniciales: 'RO', codigo: 'PAA-11072026-79846',
+    { key: 'ochoa', empresa: 'Rápido Ochoa', color: '#c8102e', iniciales: 'RO', logo: 'ochoa.png', codigo: 'PAA-11072026-79846',
       estado: 'ACTIVO',
       menor: { nombre: 'Juan Carlos Pérez', doc: 'Tarjeta de Identidad 454546444', edad: '16 años' },
       aut:   { nombre: 'Luis Prueba', cedula: '1234567890', calidad: 'Padre' },
       viaje: { fecha: '25 jul 2026', origen: 'Medellín', destino: 'Caucasia' } },
-    { key: 'bolivariano', empresa: 'Expreso Bolivariano', color: '#0a6b3b', iniciales: 'BO', codigo: 'PNN-2026-78753',
+    { key: 'bolivariano', empresa: 'Expreso Bolivariano', color: '#0a6b3b', iniciales: 'BO', logo: 'bolivariano.jpg', codigo: 'PNN-2026-78753',
       estado: 'ACTIVO',
       menor: { nombre: 'Eduard Newgate', doc: 'Registro Civil 152644845454', edad: '7 años' },
       aut:   { nombre: 'Luis Ángel Pérez López', cedula: '9999999999', calidad: 'Padre' },
       viaje: { fecha: '1 ago 2026', origen: 'Medellín', destino: 'Sucre' } },
-    { key: 'copetran', empresa: 'Copetran', color: '#1c4a8a', iniciales: 'CT', codigo: 'PAA-28062026-45454',
+    { key: 'copetran', empresa: 'Copetran', color: '#1c4a8a', iniciales: 'CT', logo: 'copetran.svg', codigo: 'PAA-28062026-45454',
       estado: 'VENCIDO',
       menor: { nombre: 'Samuel David', doc: 'Tarjeta de Identidad 5545454', edad: '14 años' },
       aut:   { nombre: 'Juan Carlos Pérez Ochoa', cedula: '72345891', calidad: 'Padre' },
       viaje: { fecha: '30 jun 2026', origen: 'Barranquilla', destino: 'Medellín' } },
-    { key: 'brasilia', empresa: 'Expreso Brasilia', color: '#e2001a', iniciales: 'EB', codigo: 'PAA-04072026-64913',
+    { key: 'brasilia', empresa: 'Expreso Brasilia', color: '#e2001a', iniciales: 'EB', logo: 'brasilia.png', codigo: 'PAA-04072026-64913',
       estado: 'VENCIDO',
       menor: { nombre: 'Javier Sosa', doc: 'Tarjeta de Identidad 4545445454', edad: '16 años' },
       aut:   { nombre: 'Luis Prueba', cedula: '1234567890', calidad: 'Padre' },
       viaje: { fecha: '10 jul 2026', origen: 'El Carmen de Bolívar', destino: 'Condoto' } },
-    { key: 'berlinas', empresa: 'Berlinas del Fonce', color: '#003a70', iniciales: 'BF', codigo: 'PAA-29062026-25425',
+    { key: 'berlinas', empresa: 'Berlinas del Fonce', color: '#003a70', iniciales: 'BF', logo: 'berlinas.png', codigo: 'PAA-29062026-25425',
       estado: 'VENCIDO',
       menor: { nombre: 'Gaus Junior', doc: 'Tarjeta de Identidad 10125425', edad: '14 años' },
       aut:   { nombre: 'Juan Carlos Pérez Ochoa', cedula: '72345891', calidad: 'Padre' },
@@ -254,6 +254,12 @@
     checkbig:'<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>',
     shield: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>',
     logout: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>',
+    funnel: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>',
+    refresh:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v5h-5"/></svg>',
+    pin:    '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>',
+    flag:   '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></svg>',
+    globe:  '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>',
+    scan:   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>',
     big: {
       aprobar:  '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-5"/></svg>',
       revision: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>',
@@ -275,30 +281,61 @@
     '</div>';
   }
 
-  let state = { view: 'buscar', permit: null, decision: null, obs: '', error: '' };
+  let state = { view: 'buscar', permit: null, decision: null, obs: '', error: '',
+                buscarTxt: '', filtrosOpen: false, estFiltro: '', ciudad: 'origen' };
   const find = (k) => PERMISOS.find((p) => p.key === k);
+  const esc = (s) => String(s == null ? '' : s).replace(/"/g, '&quot;');
 
   function row(k, v) { return '<div class="ag-row"><span class="k">' + k + '</span><span class="v">' + v + '</span></div>'; }
 
-  function viewBuscar() {
-    const chips = PERMISOS.map((p) =>
-      '<button class="ag-chip" data-key="' + p.key + '"><span class="dotc" style="background:' + p.color + '"></span>' +
+  function chipHTML(p) {
+    return '<button class="ag-chip" data-key="' + p.key + '"' +
+      ' data-codigo="' + p.codigo.toLowerCase() + '" data-nombre="' + esc(p.menor.nombre.toLowerCase()) + '" data-empresa="' + esc(p.empresa.toLowerCase()) + '">' +
+      '<span class="dotc" style="background:' + p.color + '"></span>' +
       '<span class="cc"><b>' + p.empresa + '</b><span>' + p.codigo + '</span></span>' +
-      '<span class="arrow">' + I.arrow + '</span></button>'
-    ).join('');
+      '<span class="arrow">' + I.arrow + '</span></button>';
+  }
+
+  function viewBuscar() {
+    const q = (state.buscarTxt || '').trim().toLowerCase();
+    const okEst = !state.estFiltro || state.estFiltro === 'pendiente'; // en la demo todos están pendientes
+    const lista = !okEst ? [] : PERMISOS.filter((p) => !q ||
+      p.codigo.toLowerCase().indexOf(q) !== -1 || p.menor.nombre.toLowerCase().indexOf(q) !== -1 || p.empresa.toLowerCase().indexOf(q) !== -1);
+    const chips = lista.length ? lista.map(chipHTML).join('')
+      : '<p class="ag-sinres">' + (q ? 'Sin resultados para «' + esc(state.buscarTxt) + '»' : 'No hay permisos ' + state.estFiltro + 's') + '</p>';
+    const est = [
+      { k: 'pendiente', n: 5, label: 'Pendientes', cls: 'amber' },
+      { k: 'tramitado', n: 0, label: 'Tramitados', cls: 'verde' },
+      { k: 'rechazado', n: 0, label: 'Rechazados', cls: 'red' },
+    ].map((r) => '<button class="ag-est ' + r.cls + (state.estFiltro === r.k ? ' on' : '') + '" data-est="' + r.k + '"><b>' + r.n + '</b><span>' + r.label + '</span></button>').join('');
+    const cbtn = (id, ico, label) => '<button class="ag-cbtn' + (state.ciudad === id ? ' on' : '') + '" data-ciudad="' + id + '">' + ico + ' ' + label + '</button>';
+
     return appbar() + '<div class="ag-body">' +
-      '<div><p class="ag-h1">Validar permiso</p><p class="ag-sub">Escanee el código o ingréselo manualmente.</p></div>' +
+      '<div><p class="ag-h1">Validar permiso</p><p class="ag-sub">Busque el permiso por código o nombre del menor, o use los filtros.</p></div>' +
+      '<div class="ag-estados">' + est + '</div>' +
       '<div class="ag-grid2">' +
-        '<div style="display:flex;flex-direction:column;gap:12px">' +
-          '<div class="ag-card"><h4>' + I.qr + ' Escáner de cámara</h4>' +
-            '<div class="ag-scan" data-scan><div class="laser"></div>' + I.cam + '<span>Toca para simular el escaneo</span></div></div>' +
-          '<div class="ag-card"><h4>' + I.search + ' Buscar por código</h4>' +
-            '<div class="ag-field"><input class="ag-input" id="agCodigo" placeholder="Ej: PNN-2026-78753" autocomplete="off">' +
-            '<button class="ag-btn ag-btn-primary" data-buscar>Buscar</button></div>' +
-            (state.error ? '<p class="ag-hint" style="color:#d92d20;font-weight:600">' + state.error + '</p>'
-                         : '<p class="ag-hint">El código está impreso en el permiso.</p>') + '</div>' +
-        '</div>' +
-        '<div class="ag-card"><h4>Permisos de demostración</h4><div class="ag-chips">' + chips + '</div></div>' +
+          '<div class="ag-card">' +
+            '<div class="ag-search-row">' +
+              '<div class="ag-search">' + I.search + '<input class="ag-input2" id="agBuscar" placeholder="Código o nombre del menor…" autocomplete="off" value="' + esc(state.buscarTxt) + '">' +
+                '<button class="ag-scanbtn" data-scan title="Escanear el código (en el celular)">' + I.scan + '</button></div>' +
+              '<button class="ag-filtros-btn' + (state.filtrosOpen ? ' on' : '') + '" data-filtros>' + I.funnel + ' Filtros</button>' +
+            '</div>' +
+            (state.filtrosOpen ?
+              '<div class="ag-filtros-adv">' +
+                '<p class="ag-adv-t">Ver permisos</p>' +
+                '<div class="ag-city">' + cbtn('origen', I.pin, 'Origen') + cbtn('destino', I.flag, 'Destino') + cbtn('todos', I.globe, 'Todos') + '</div>' +
+                '<div class="ag-fechas">' +
+                  '<div><label>Desde (fecha viaje)</label><input type="date" class="ag-input2"></div>' +
+                  '<div><label>Hasta (fecha viaje)</label><input type="date" class="ag-input2"></div>' +
+                '</div>' +
+              '</div>' : '') +
+            '<div class="ag-acciones">' +
+              '<button class="ag-btn ag-btn-primary" data-buscarbtn>' + I.refresh + ' Buscar</button>' +
+              '<button class="ag-btn-lnk" data-limpiar>Limpiar</button>' +
+              '<span class="ag-count">' + lista.length + ' permiso' + (lista.length !== 1 ? 's' : '') + '</span>' +
+            '</div>' +
+          '</div>' +
+        '<div class="ag-card"><h4>Permisos de demostración</h4><div class="ag-chips" id="agChips">' + chips + '</div></div>' +
       '</div>' +
     '</div>';
   }
@@ -339,7 +376,7 @@
       '<div><p class="ag-h1">Verificación de permiso</p><p class="ag-sub">Código: <b style="font-family:ui-monospace,monospace">' + p.codigo + '</b></p></div>' +
       '<div class="ag-status ' + e.cls + '"><span class="si">' + icoEstado + '</span>' +
         '<div class="stx"><div class="st">' + e.label + '</div><div class="sc">' + p.codigo + '</div><div class="sa">' + e.agente + '</div></div>' +
-        '<span class="ag-emp" style="background:' + p.color + '">' + p.iniciales + '</span></div>' +
+        '<span class="ag-emp"><img src="assets/logos/' + p.logo + '" alt="' + p.empresa + '"></span></div>' +
       '<div class="ag-grid2">' +
       '<div style="display:flex;flex-direction:column;gap:12px">' +
         '<div class="ag-sec"><h5>Empresa</h5>' + row('Nombre', p.empresa) + row('Tipo', 'Transporte intermunicipal') + '</div>' +
@@ -367,9 +404,13 @@
       '<button class="ag-btn ag-btn-primary" data-reset style="width:100%">Validar otro permiso</button></div>';
   }
 
+  let prevView = null;
   function render() {
+    const mismaVista = prevView === state.view;   // clic dentro de la misma pantalla → no saltar arriba
+    const sc = screen.scrollTop;
     screen.innerHTML = state.view === 'buscar' ? viewBuscar() : state.view === 'validar' ? viewValidar() : viewResultado();
-    screen.scrollTop = 0;
+    screen.scrollTop = mismaVista ? sc : 0;
+    prevView = state.view;
   }
   function go(view, patch) { state = Object.assign(state, { view: view, error: '' }, patch || {}); render(); }
 
@@ -384,25 +425,37 @@
     const chip = e.target.closest('[data-key]');
     if (chip) return go('validar', { permit: find(chip.dataset.key), decision: null, obs: '' });
     if (e.target.closest('[data-scan]')) return go('validar', { permit: PERMISOS[Math.floor(Math.random() * PERMISOS.length)], decision: null, obs: '' });
-    if (e.target.closest('[data-buscar]')) return buscar();
+    if (e.target.closest('[data-filtros]')) { state.filtrosOpen = !state.filtrosOpen; render(); return; }
+    const estBtn = e.target.closest('[data-est]');
+    if (estBtn) { state.estFiltro = state.estFiltro === estBtn.dataset.est ? '' : estBtn.dataset.est; render(); return; }
+    const ciBtn = e.target.closest('[data-ciudad]');
+    if (ciBtn) { state.ciudad = ciBtn.dataset.ciudad; render(); return; }
+    if (e.target.closest('[data-limpiar]')) { Object.assign(state, { buscarTxt: '', estFiltro: '', ciudad: 'origen', filtrosOpen: false }); render(); return; }
+    if (e.target.closest('[data-buscarbtn]')) { render(); return; }
     if (e.target.closest('[data-back]')) return go('buscar', { permit: null, decision: null, obs: '' });
-    if (e.target.closest('[data-reset]')) return go('buscar', { permit: null, decision: null, obs: '' });
+    if (e.target.closest('[data-reset]')) return go('buscar', { permit: null, decision: null, obs: '', buscarTxt: '', estFiltro: '', filtrosOpen: false });
     const opt = e.target.closest('[data-dec]');
     if (opt) { state.decision = opt.dataset.dec; state.obs = ''; render(); return; }
     if (e.target.closest('#agConfirm') && !e.target.closest('#agConfirm').disabled) return go('resultado');
   });
-  screen.addEventListener('input', (e) => { if (e.target.id === 'agObs') { state.obs = e.target.value; actualizarConfirm(); } });
-  screen.addEventListener('keydown', (e) => { if (e.target.id === 'agCodigo' && e.key === 'Enter') { e.preventDefault(); buscar(); } });
-
-  function buscar() {
-    const input = screen.querySelector('#agCodigo');
-    const val = (input ? input.value : '').trim().toUpperCase();
-    if (!val) return;
-    const p = PERMISOS.find((x) => x.codigo.toUpperCase() === val || x.codigo.toUpperCase().indexOf(val) !== -1);
-    if (p) return go('validar', { permit: p, decision: null, obs: '' });
-    state.error = 'Permiso no encontrado. Verifique el código.';
-    render();
-  }
+  screen.addEventListener('input', (e) => {
+    if (e.target.id === 'agObs') { state.obs = e.target.value; actualizarConfirm(); return; }
+    if (e.target.id === 'agBuscar') {
+      const pos = e.target.selectionStart, sc = screen.scrollTop;
+      state.buscarTxt = e.target.value;
+      render(); screen.scrollTop = sc;
+      const ni = screen.querySelector('#agBuscar');
+      if (ni) { ni.focus(); try { ni.setSelectionRange(pos, pos); } catch (_) {} }
+    }
+  });
+  screen.addEventListener('keydown', (e) => {
+    if (e.target.id === 'agBuscar' && e.key === 'Enter') {
+      e.preventDefault();
+      const q = (state.buscarTxt || '').trim().toLowerCase();
+      const m = q && PERMISOS.find((p) => p.codigo.toLowerCase().indexOf(q) !== -1 || p.menor.nombre.toLowerCase().indexOf(q) !== -1);
+      if (m) go('validar', { permit: m, decision: null, obs: '' });
+    }
+  });
 
   render();
 })();
